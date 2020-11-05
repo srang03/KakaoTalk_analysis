@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>안녕하세요</h1>
+    <div>
+        <pre id="preview">hi</pre>
+
+        <form action="/fileUpload" method="post" enctype="multipart/form-data">
+            <input type="file" id="file" accept="text/*" name='file'>
+            <input type="submit">
+        </form>
+        {% if data %}
+        <div>
+            <img src="../static/{{data}}" alt="">
+        </div>
+        {% endif %}
+    </div>
+    <script>
+        // var file = document.getElementById('file');
+        // var line = '';
+        // file.onchange = function(e) {
+        //     var files = e.target.files; // FileList 객체
+        //     // console.log(files); // { 0: File, 1: File, length: 2 }
+        //     // console.log(files[0]); // 아래에 적어놨습니다.
+        // }
+        // file.onchange = function(e) {
+        //     var fileReader = new FileReader();
+        //     fileReader.readAsText(e.target.files[0]);
+        //     fileReader.onload = function(e) {
+        //         line = e.target.result;
+        //         console.log(line);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
